@@ -24,7 +24,7 @@ def test_get_latest_build_pattern(rq_get):
     eq_(build, 10)
 
 @patch('requests.get')
-def test_get_latest_build_pattern(rq_get):
+def test_get_artifacts_pattern(rq_get):
     rq_get.configure_mock(return_value=FakeResponse([{'pretty_path': '$CIRCLE_ARTIFACTS/bees', 'url': 'http://example.com/bees'}]))
     artifacts = get_artifact_list(PROJECT, 12)
     rq_get.assert_called_with('http://example.com/project/pony/bees/12/artifacts', headers={'Accept': 'application/json'})
