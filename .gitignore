@@ -6,3 +6,4 @@ circle_asset.egg-info
 setuptools-*.zip
 *.egg
 .eggs
+.coverage
