@@ -23,6 +23,15 @@ setup(name='circle-asset',
       license="MIT",
       long_description=description,
       url='https://github.com/prophile/circle-asset',
+      classifiers=[
+          'Development status :: 3 - Alpha',
+          'Intended Audience :: Developers',
+          'Intended Audience :: System Administrators',
+          'License :: OSI Approved :: MIT License',
+          'Programming Language :: Python :: 3.4',
+          'Topic :: Software Development :: Testing',
+          'Topic :: System :: Installation/Setup'
+      ],
       zip_safe=True,
       setup_requires=['nose >=1, <2'],
       install_requires=[
