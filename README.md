@@ -1,5 +1,4 @@
-circle-asset
-============
+# circle-asset [![Latest Version](https://pypip.in/version/circle-asset/badge.svg)](https://pypi.python.org/pypi/circle-asset/)
 
 [![Circle CI](https://circleci.com/gh/prophile/circle-asset.svg?style=svg)](https://circleci.com/gh/prophile/circle-asset)
 
