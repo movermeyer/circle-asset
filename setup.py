@@ -33,13 +33,15 @@ setup(name='circle-asset',
           'Topic :: System :: Installation/Setup'
       ],
       zip_safe=True,
-      setup_requires=['nose >=1, <2'],
+      setup_requires=[
+          'nose >=1, <2',
+          'coverage >=3.7, <4'
+      ],
       install_requires=[
           'requests >=2.5, <3'
       ],
       entry_points={'console_scripts': [
           'circle-asset=circle_asset.cli:main'
       ]},
-      packages=find_packages(),
-      test_suite='nose.collector')
+      packages=find_packages())
 

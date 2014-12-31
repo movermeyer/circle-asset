@@ -1,4 +1,7 @@
 machine:
   python:
     version: 3.4.1
+test:
+  override:
+    - python setup.py nosetests
 
