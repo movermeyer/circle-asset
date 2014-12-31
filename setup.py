@@ -1,4 +1,5 @@
 import sys
+import re
 
 if sys.version < '3.4':
     print('Sorry, this is not a compatible version of Python. Use 3.4 or later.')
@@ -8,6 +9,9 @@ from setuptools import setup, find_packages
 
 with open('README.md') as f:
     description = f.read()
+    description = re.sub(r'\[!\[.+\].+\]\(.+\)', '', description)
+    description = '\n'.join(description.splitlines()[2:])
+    description = re.sub('\n{2,}', '\n\n', description).strip()
 
 from circle_asset.version import VERSION, SHORT_DESCRIPTION
 
