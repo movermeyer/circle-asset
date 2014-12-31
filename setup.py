@@ -24,7 +24,7 @@ setup(name='circle-asset',
       long_description=description,
       url='https://github.com/prophile/circle-asset',
       classifiers=[
-          'Development status :: 3 - Alpha',
+          'Development Status :: 3 - Alpha',
           'Intended Audience :: Developers',
           'Intended Audience :: System Administrators',
           'License :: OSI Approved :: MIT License',
