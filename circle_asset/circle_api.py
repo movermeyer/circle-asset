@@ -20,13 +20,13 @@ def get_latest_build(project, branch, allow_failures=False):
     return output[0]['build_num']
 
 def get_artifact_list(project, build):
-    target = '{root}/project/{user}/{project}/{build}/artifacts?limit=1'.format(
+    target = '{root}/project/{user}/{project}/{build}/artifacts'.format(
                 root=project.api_root,
                 user=project.username,
                 project=project.project,
                 build=build)
     if project.token is not None:
-        target += '&circle-token={}'.format(project.token)
+        target += '?circle-token={}'.format(project.token)
     data = requests.get(target, headers={'Accept': 'application/json'})
     output = data.json()
     return {x['pretty_path'][18:]: x['url'] for x in output}
