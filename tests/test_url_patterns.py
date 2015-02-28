@@ -1,4 +1,4 @@
-from nose.tools import eq_
+from nose.tools import eq_, raises
 from unittest.mock import patch
 
 from circle_asset.circle_api import get_latest_build, get_artifact_list
@@ -30,6 +30,12 @@ def test_get_latest_build_token(rq_get):
     rq_get.configure_mock(return_value=FakeResponse([{'build_num': 10}]))
     build = get_latest_build(PROJECT_TOKENED, 'master')
     rq_get.assert_called_with('http://example.com/project/pony/bees/tree/master?limit=1&filter=successful&circle-token=eyes', headers={'Accept': 'application/json'})
+
+@raises(ValueError)
+@patch('requests.get')
+def test_get_latest_build_no_matching_builds(rq_get):
+    rq_get.configure_mock(return_value=FakeResponse([]))
+    get_latest_build(PROJECT, 'master')
 
 @patch('requests.get')
 def test_get_artifacts_pattern(rq_get):
