@@ -1,9 +1,10 @@
 machine:
   python:
     version: 3.4.1
+dependencies:
+  pre:
+    - pip uninstall circle-asset # Work around some setuptools cache issues
 test:
   override:
-    - pip uninstall circle-asset # Work around some setuptools cache issues
     - mkdir -p $CIRCLE_TEST_REPORTS/junit
     - python setup.py nosetests --with-xunit --xunit-file=$CIRCLE_TEST_REPORTS/junit/nosetests.xml
-
