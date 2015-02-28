@@ -21,7 +21,7 @@ setup(name='circle-asset',
       long_description=description,
       url='https://github.com/prophile/circle-asset',
       classifiers=[
-          'Development Status :: 3 - Alpha',
+          'Development Status :: 4 - Beta',
           'Intended Audience :: Developers',
           'Intended Audience :: System Administrators',
           'License :: OSI Approved :: MIT License',
@@ -38,7 +38,7 @@ setup(name='circle-asset',
           'requests >=2.5, <3'
       ],
       tests_require=[
-          'coverage >=3.7, <4'
+          'coverage >=3.7, <5'
       ],
       entry_points={'console_scripts': [
           'circle-asset=circle_asset.cli:main'
