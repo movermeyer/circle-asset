@@ -2,6 +2,7 @@ from .version import *
 from .project import Project
 from .circle_api import get_latest_build, get_artifact_list
 import argparse
+import sys
 from fnmatch import fnmatch
 from urllib.request import urlretrieve
 
@@ -36,6 +37,6 @@ def main():
     for name, url in artifacts.items():
         if any(fnmatch(name, pattern) for pattern in args.artifact):
             print('Downloading {}...'.format(name), end='')
+            sys.stdout.flush()
             urlretrieve(url, filename=name)
             print('{}[DONE]'.format(' '*(60 - len(name))))
-
