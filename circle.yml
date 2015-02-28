@@ -3,7 +3,7 @@ machine:
     version: 3.4.1
 dependencies:
   pre:
-    - pip uninstall circle-asset # Work around some setuptools cache issues
+    - pip uninstall -y circle-asset # Work around some setuptools cache issues
 test:
   override:
     - mkdir -p $CIRCLE_TEST_REPORTS/junit
