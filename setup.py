@@ -32,11 +32,13 @@ setup(name='circle-asset',
       ],
       zip_safe=True,
       setup_requires=[
-          'nose >=1, <2',
-          'coverage >=3.7, <4'
+          'nose >=1, <2'
       ],
       install_requires=[
           'requests >=2.5, <3'
+      ],
+      tests_require=[
+          'coverage >=3.7, <4'
       ],
       entry_points={'console_scripts': [
           'circle-asset=circle_asset.cli:main'
