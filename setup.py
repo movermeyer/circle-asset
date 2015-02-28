@@ -7,11 +7,8 @@ if sys.version < '3.3':
 
 from setuptools import setup, find_packages
 
-with open('README.md') as f:
+with open('README.rst') as f:
     description = f.read()
-    description = re.sub(r'\[!\[.+\].+\]\(.+\)', '', description)
-    description = '\n'.join(description.splitlines()[2:])
-    description = re.sub('\n{2,}', '\n\n', description).strip()
 
 from circle_asset.version import VERSION, SHORT_DESCRIPTION
 
