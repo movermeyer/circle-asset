@@ -1,8 +1,8 @@
 import sys
 import re
 
-if sys.version < '3.4':
-    print('Sorry, this is not a compatible version of Python. Use 3.4 or later.')
+if sys.version < '3.3':
+    print('Sorry, this is not a compatible version of Python. Use 3.3 or later.')
     exit(1)
 
 from setuptools import setup, find_packages
@@ -28,6 +28,7 @@ setup(name='circle-asset',
           'Intended Audience :: Developers',
           'Intended Audience :: System Administrators',
           'License :: OSI Approved :: MIT License',
+          'Programming Language :: Python :: 3.3',
           'Programming Language :: Python :: 3.4',
           'Topic :: Software Development :: Testing',
           'Topic :: System :: Installation/Setup'
