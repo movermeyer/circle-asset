@@ -27,7 +27,7 @@ A tool for getting the latest assets from CircleCI.
       --accept-failed      Accepts artifacts from the latest build
       --build BUILD        Go to a specific build
 
-.. |Latest Version| image:: https://pypip.in/version/circle_asset/badge.svg
+.. |Latest Version| image:: https://img.shields.io/pypi/v/circle_asset.svg
    :target: https://pypi.python.org/pypi/circle-asset/
 .. |Circle CI| image:: https://circleci.com/gh/prophile/circle-asset.svg?style=svg
    :target: https://circleci.com/gh/prophile/circle-asset
